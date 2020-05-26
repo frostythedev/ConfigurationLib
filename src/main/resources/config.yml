@@ -1,0 +1,14 @@
+config-version: 5
+
+string-list:
+  - 'This is Line 1'
+  - 'This is Line 2'
+  - 'This is Line 3'
+
+section:
+  0:
+    name: 'This is a name test in a list'
+    description: 'This is a desc test in a list'
+  1:
+    name: 'This is item 2'
+    description: 'This is a desc test in a list'
