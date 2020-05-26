@@ -1,7 +1,8 @@
-package me.frostythedev.configlib.examples.types;
+package me.frostythedev.configlib.exampleplugin.types;
 
-import me.frostythedev.configlib.examples.ExampleConfig;
-import me.frostythedev.configlib.examples.ExamplePlugin;
+
+import me.frostythedev.configlib.exampleplugin.ExampleConfig;
+import me.frostythedev.configlib.exampleplugin.ExamplePlugin;
 
 public class UpdateVariablesExample {
 

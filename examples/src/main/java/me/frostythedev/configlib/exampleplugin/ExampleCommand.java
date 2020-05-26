@@ -1,4 +1,4 @@
-package me.frostythedev.configlib.examples;
+package me.frostythedev.configlib.exampleplugin;
 
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;

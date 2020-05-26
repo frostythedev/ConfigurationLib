@@ -8,13 +8,14 @@ import java.nio.file.Files;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import me.frostythedev.configlib.core.BaseConfig;
 import me.frostythedev.configlib.core.annotations.ConfigInfo;
 import org.bukkit.configuration.ConfigurationSection;
 import org.bukkit.configuration.InvalidConfigurationException;
 import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.plugin.java.JavaPlugin;
 
-public class BaseConfig<T extends JavaPlugin> {
+public class BukkitConfig<T extends JavaPlugin> implements BaseConfig<T> {
 
   private T plugin;
 
@@ -72,7 +73,7 @@ public class BaseConfig<T extends JavaPlugin> {
     }
   }
 
-  public boolean save() {
+  public boolean saveConfig() {
     if(!isLoaded()) return false;
 
     try {
@@ -106,7 +107,7 @@ public class BaseConfig<T extends JavaPlugin> {
 
   }
 
-  protected T getPlugin() {
+  public T getPlugin() {
     return this.plugin;
   }
 

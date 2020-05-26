@@ -1,0 +1,5 @@
+name: ConfigLib
+main: me.frostythedev.configlib.exampleplugin.ExamplePlugin
+version: 1.0-SNAPSHOT
+authors: [frostythedev]
+website: github.com/TevinsTech/ConfigurationLib

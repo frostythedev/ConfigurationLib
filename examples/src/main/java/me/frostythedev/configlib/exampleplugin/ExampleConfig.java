@@ -1,18 +1,18 @@
-package me.frostythedev.configlib.examples;
+package me.frostythedev.configlib.exampleplugin;
 
 import com.google.common.collect.Lists;
 import com.google.common.collect.Sets;
 import java.util.List;
 import java.util.Set;
-import me.frostythedev.configlib.bukkit.BaseConfig;
-import me.frostythedev.configlib.core.annotations.ConfigInfo;
+import me.frostythedev.configlib.bukkit.BukkitConfig;
 import me.frostythedev.configlib.bukkit.NullConfigSection;
+import me.frostythedev.configlib.core.annotations.ConfigInfo;
 import me.frostythedev.configlib.core.annotations.OnLoadVariable;
 import me.frostythedev.configlib.core.annotations.OnLoadVariable.Type;
 import org.bukkit.configuration.ConfigurationSection;
 
 @ConfigInfo(name = "config.yml")
-public class ExampleConfig extends BaseConfig<ExamplePlugin> {
+public class ExampleConfig extends BukkitConfig<ExamplePlugin> {
 
   @OnLoadVariable(path = "config-version", type = Type.VARIABLE)
   private int configVersion = 1;

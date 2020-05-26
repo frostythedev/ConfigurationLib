@@ -1,6 +1,5 @@
 package me.frostythedev.configlib.core;
 
-import me.frostythedev.configlib.bukkit.BaseConfig;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public interface Manager<T extends JavaPlugin> {

@@ -1,6 +1,10 @@
-package me.frostythedev.configlib.examples;
+package me.frostythedev.configlib.exampleplugin;
 
-import me.frostythedev.configlib.bukkit.ConfigManager;
+import me.frostythedev.configlib.core.ConfigManager;
+import me.frostythedev.configlib.exampleplugin.types.ConfigSectionExample;
+import me.frostythedev.configlib.exampleplugin.types.SectionKeyExample;
+import me.frostythedev.configlib.exampleplugin.types.StringListExample;
+import me.frostythedev.configlib.exampleplugin.types.UpdateVariablesExample;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public class ExamplePlugin extends JavaPlugin {
@@ -21,10 +25,10 @@ public class ExamplePlugin extends JavaPlugin {
 
     this.config.loadConfig();
 
-    //new UpdateVariablesExample(this);
-    //new StringListExample(this);
-    //new SectionKeyExample(this);
-    //new ConfigSectionExample(this);
+    new UpdateVariablesExample(this);
+    new StringListExample(this);
+    new SectionKeyExample(this);
+    new ConfigSectionExample(this);
   }
 
   public ExampleConfig getExampleConfig() {

@@ -1,11 +1,10 @@
-package me.frostythedev.configlib.bukkit;
+package me.frostythedev.configlib.core;
 
 import com.google.common.collect.Maps;
 import java.lang.reflect.Field;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
-import me.frostythedev.configlib.core.Manager;
 import me.frostythedev.configlib.core.annotations.OnLoadVariable;
 import me.frostythedev.configlib.core.annotations.OnLoadVariable.Type;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -74,19 +73,19 @@ public class ConfigManager<T extends JavaPlugin> implements Manager<T> {
 
           if(onLoadVariable.type() == Type.VARIABLE){
             if (value instanceof String) {
-              field.set(configObject, configObject.getConfig().getString(path));
+              field.set(configObject, configObject.getString(path));
             } else if (value instanceof Integer) {
-              field.set(configObject, configObject.getConfig().getInt(path));
+              field.set(configObject, configObject.getInteger(path));
             } else if (value instanceof Double) {
-              field.set(configObject, configObject.getConfig().getDouble(path));
+              field.set(configObject, configObject.getDouble(path));
             } else if (value instanceof Boolean) {
-              field.set(configObject, configObject.getConfig().getBoolean(path));
+              field.set(configObject, configObject.getBoolean(path));
             } else {
-              field.set(configObject, configObject.getConfig().get(path));
+              field.set(configObject, configObject.get(path));
             }
           }else if (onLoadVariable.type() == Type.SECTION){
 
-            field.set(configObject, configObject.getConfig().getConfigurationSection(path));
+            field.set(configObject, configObject.getSection(path));
           }else {
             if (value instanceof List<?>) {
               List<?> genericList = configObject.getList(path);
@@ -118,7 +117,7 @@ public class ConfigManager<T extends JavaPlugin> implements Manager<T> {
 
     config.loadConfig();
     config.set(path, value);
-    if (config.save()) {
+    if (config.saveConfig()) {
       reloadFields(clazz);
       return true;
     }
