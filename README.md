@@ -1,11 +1,17 @@
 # Welcome to the ConfigurationLib wiki!
 This is my implementation of an annotation based configuration api for Spigot/Bukkit which is multi-platform and will eventually have support for all flavors of Spigot including Paper.
 
+### **NOTE** This is meant to be built into your plugin itself, Maven shading is coming soon.
+
+# Wiki
+
+## Home
+
 [Getting Started ](https://github.com/tevinstech/ConfigurationLib/wiki/Using-Configurationlib)
 
 [Example Plugin](https://github.com/tevinstech/ConfigurationLib/wiki/Real-Examples)
 
-Documentation: 
+## Documentation: 
 
 [Annotations](https://github.com/tevinstech/ConfigurationLib/wiki/Annotations)
 
